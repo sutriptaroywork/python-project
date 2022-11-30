@@ -9,7 +9,7 @@ class Solution:
                 mid += 1
             elif arr[mid] == 1:
                 mid += 1
-            else
+            else:
                 arr[r], arr[mid] = arr[mid], arr[r]
                 r -= 1
 
