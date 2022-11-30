@@ -23,6 +23,9 @@ class Solution:
             if freq1[i] ^ freq2[i]:
                 char_list += chr(ord('a') + i)
 
+        if char_list == "":
+            return -1
+
         return char_list
 
 
