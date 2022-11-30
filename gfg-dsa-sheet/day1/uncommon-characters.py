@@ -36,7 +36,7 @@ uncommon_char_list = obj.find_uncommon(str1, str2)
 print(uncommon_char_list)
 
 
-
+# we need to find all the uncommon characters from the two strings.
 # here we are first taking two constant hashmaps of 26 items with all the value - "False".
 # as english can have maximum 26 characters, we are taking the length of 26.
 # then we are iterating two loops to get all the characters of the two strings.
