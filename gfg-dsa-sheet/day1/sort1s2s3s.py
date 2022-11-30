@@ -1,6 +1,6 @@
 class Solution:
     def sort_0s_1s_2s(self, arr):
-        l, mid, r = 0, 0, arr.length - 1
+        l, mid, r = 0, 0, len(arr) - 1
 
         while mid <= r:
             if arr[mid] == 0:
