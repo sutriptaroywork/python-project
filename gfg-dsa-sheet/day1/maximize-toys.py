@@ -4,7 +4,7 @@ class Solution:
         toy_arr.sort()
 
         for i in toy_arr:
-            if money_available <= i:
+            if money_available >= i:
                 total_toys += 1
 
         return total_toys
