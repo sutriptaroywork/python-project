@@ -21,8 +21,8 @@ class Solution:
 
 arr = [3, 8, 12, 6, 5]
 obj = Solution()
-equilibrium_point = obj.equilibrium_point(arr)
-print(equilibrium_point)
+equilibrium_item = obj.equilibrium_point(arr)
+print(equilibrium_item)
 
 
 # here we are going to find the equilibrium point in an array.
