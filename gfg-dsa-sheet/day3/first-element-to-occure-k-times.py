@@ -1,6 +1,6 @@
 class Solution:
-    def element_k_times(self, arr,target):
-        my_dict = dict.fromkeys(arr, 0);
+    def element_k_times(self, arr, target):
+        my_dict = dict.fromkeys(arr, 0)
 
         for i in arr:
             my_dict[i] += 1
