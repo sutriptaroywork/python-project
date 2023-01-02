@@ -10,9 +10,9 @@ class Solution:
         max_reach = arr[0]
         jumps = 1
 
-        for i in range(n):
+        for i in range(1, n):
             if max_reach >= n - 1 or i == n - 1:
-                if i + jumps < n - 1:
+                if i + steps < n - 1:
                     jumps += 1
                 return jumps
 
