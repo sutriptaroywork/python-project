@@ -39,3 +39,5 @@ print(no_of_platforms)
 # here time complexity of the solution will be - O(n log n) and space complexity will be - O(1).
 # as we are sorting both the arrays and then iterating, the time is directly dependent upon the size of the array and the sorting time. So the time complexity will be O(n log n) + O(n), which is O(n log n), as we always take the bigger one.
 # as we are using variables to store data where the number of variables is not directly dependent on the size of the array, the space complexity will be O(1).
+
+# Video Link - https://www.youtube.com/watch?v=Ls_AYoz1IX0
