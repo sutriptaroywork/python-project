@@ -1,5 +1,5 @@
 class Solution:
-    def minNoOfJumps(self, arr):
+    def min_no_of_jumps(self, arr):
         n = len(arr)
         if n == 0:
             return 0
@@ -33,7 +33,7 @@ class Solution:
 arr = [1, 3, 5, 8, 0, 2, 6, 7, 6, 8, 9]
 
 obj = Solution()
-no_of_jumps = obj.minNoOfJumps(arr)
+no_of_jumps = obj.min_no_of_jumps(arr)
 print(no_of_jumps)
 
 
