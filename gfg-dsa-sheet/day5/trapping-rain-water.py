@@ -1,27 +1,30 @@
 class Solution:
     def trapping_rain_water(self, arr):
-        leftHighest = []
-        rightHighest = []
-        maxTillNow = -1
-        trappedWaterBlocks = 0
+        left_highest = []
+        right_highest = []
+        max_till_now = -1
+        trapped_water_blocks = 0
 
         for i in range(len(arr)):
-            maxTillNow = max(maxTillNow, arr[i])
-            leftHighest.append(max(maxTillNow, arr[i]))
+            max_till_now = max(max_till_now, arr[i])
+            left_highest.append(max_till_now)
 
-        maxTillNow = -1
+        max_till_now = -1
 
         for i in reversed(range(len(arr))):
-            maxTillNow = max(maxTillNow, arr[i])
-            rightHighest.append(max(maxTillNow, arr[i]))
+            max_till_now = max(max_till_now, arr[i])
+            right_highest.append(max_till_now)
+
+        right_highest.reverse()
 
         for i in range(len(arr)):
-            trappedWaterBlocks += min(leftHighest[i], rightHighest[i]) - arr[i]
+            trapped_water_blocks += min(left_highest[i], right_highest[i]) - arr[i]
 
-        return trappedWaterBlocks
+        return trapped_water_blocks
 
 
-arr = [3,0,0,2,0,4]
+# arr = [3,0,0,2,0,4]
+arr = [1, 1, 5, 2, 7, 6, 1, 4, 2, 3]
 obj = Solution()
 no_of_blocks_of_water = obj.trapping_rain_water(arr)
 print(no_of_blocks_of_water)
