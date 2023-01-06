@@ -100,19 +100,17 @@ new_head = obj.rotate_linked_list_upto_kth_times(ll.head, k)
 ll.print_list_by_head(new_head)
 
 
-# here we need to reverse a linked list.
-# first we have built a class to make out linked list.
-# then we have made out "Solution" class to make the solution function.
-# there we are receiving the head position, that means the starting position of a linked list.
-# so we assign that into a variable named "current" and we assign "None" into another variable named "prev".
-# now we are iterating a while loop until the current is not at the end of the linked list i.e. "Null".
-# so on every iteration we are getting our current node and its next node reference.
-# We just simply store the next node into a temp file and assign our previous node as the current node next element.
-# then we assign our current node as previous and the temp data i.e. the next node as current.
+# here we need to rotate a linked list.
+# we already have "k", which denotes the number of times we need to rotate or the number of nodes we need to pass before making the linked list rotate.
+# so after generating the linked list we are calling our Solution class function to rotate this.
+# the process to do this is following -.
+# 1. we take a counter variable which will be increased omn each iteration and whenever it matches with the "k", we will store few data.
+# 2. we need to store the kth-Node and Next of the k-th Node.
+# 3. because we need to point kth-Node next to None or Null, we need to point our last node next to the head and we need to change the head to the Next of the k-th Node.
 
 
 # here time complexity of the solution will be - O(n) and space complexity will be - O(1).
 # as we are iterating, the time is directly dependent upon the size of the linked list. So the time complexity will be O(n).
-# as we are using variables to store current or previous data which are not directly dependent on the size of the linked list, the space complexity will be O(n).
+# as we are using variables to store kth node, next of the kth node and count which are constant and not directly dependent on the size of the linked list, the space complexity will be O(1).
 
-# Video Link - https://www.youtube.com/watch?v=oAja8-Ulz6o / https://www.youtube.com/watch?v=t7YaoQOFXzk / https://www.youtube.com/watch?v=ugQ2DVJJroc
+# Video Link - https://www.youtube.com/watch?v=tWtq2nd7sI4
