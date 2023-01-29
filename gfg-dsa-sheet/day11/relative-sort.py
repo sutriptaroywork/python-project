@@ -46,13 +46,13 @@ res = obj.relative_sort(arr1, n, arr2, m)
 print(res) 
 
 
-# here we need to find the maximum number of toys we can buy.
-# we have an array of prices of the toys.
-# so we need to add lowest value toys to add maximum number of toys within the "k" amount of money.
-# so we need to sort the array first to get the lowest amounts first.
-# and then we are just checking that if the price is less than or equal to the money, no of toys is getting increased by 1 and total money is getting decreased by the price of the toy.
+# here we need to sort the first array according to the second array i.e we need to add all the items from the first array which matches with the second array and then add the remaining items in sorted order. If no item from second array matches with the first array just return first array in a sorted manner.
+# so we need to sort the first array.
+# then we need to use a hashmap to store the items of the first array with its occurrence.
+# then we need to find the items from second array one by one from the hashmap and need to add those in a separate array fo r the times it occurs in the first array and delete those keys from the hashmap.
+# and then we need to add the remaining keys for the times it occurs in the first array and delete every item from the hashmap.
 
-# here time complexity of the solution will be - O(n log n) and space complexity will be - O(1).
-# as we are sorting the array and then iterating the array, we have a time complexity of sorting - O(n log n) and a time complexity of iterating - O(n). So adding both becomes O(n log n) + O(n) = O(n log n). Because we always ignore the lower time complexity.
-# as we are using variables to store values which are not directly dependent on the size of the array, the space complexity will be O(1).
+# here time complexity of the solution will be - O(n log n) and space complexity will be - O(n).
+# as we are sorting the array and then iterating the array, we have a time complexity of sorting - O(n log n).
+# as we are using hashmap to store values which is directly dependent on the size of the array, the space complexity will be O(n).
 
