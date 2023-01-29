@@ -28,6 +28,6 @@ print(res)
 # and then we are just checking that if the price is less than or equal to the money, no of toys is getting increased by 1 and total money is getting decreased by the price of the toy.
 
 # here time complexity of the solution will be - O(n log n) and space complexity will be - O(1).
-# as we are sorting the array and then iterating the array, we have a time complexity of sorting - O(n log n) and a time complexity of iterating - O(n). So adding both becomes O(n log n) + O(n) = O(n log n). Because we always ignore the lower time complexity.
+# as we are sorting the array and then iterating the array, we have a time complexity of sorting - O(n log n).
 # as we are using variables to store values which are not directly dependent on the size of the array, the space complexity will be O(1).
 
