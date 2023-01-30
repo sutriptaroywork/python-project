@@ -30,3 +30,4 @@ print(res)
 # as we are iterating until b gets 0, it literally iterates till the number of maximum bit between a and b.
 # as we are using variables to store values which are not directly dependent on the size of the array, the space complexity will be O(1).
 
+# Video Link - https://www.youtube.com/watch?v=q23uhJw1Fko / https://www.youtube.com/watch?v=N3dtzMKJMn8 / https://www.youtube.com/watch?v=kIXhc8nZKIo
