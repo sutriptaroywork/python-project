@@ -1,24 +1,24 @@
-class Solution:
-    def lcsUtil(self, x, y, s1, s2):
-        if x == 0 or y == 0:
-            return 0
+# class Solution:
+#     def lcsUtil(self, x, y, s1, s2):
+#         if x == 0 or y == 0:
+#             return 0
 
-        if (s1[x-1] == s2[y-1]):
-            return 1 + self.lcsUtil(x - 1, y - 1, s1, s2)
-        else:
-            return max(self.lcsUtil(x - 1, y, s1, s2), self.lcsUtil(x, y - 1, s1, s2))
+#         if (s1[x-1] == s2[y-1]):
+#             return 1 + self.lcsUtil(x - 1, y - 1, s1, s2)
+#         else:
+#             return max(self.lcsUtil(x - 1, y, s1, s2), self.lcsUtil(x, y - 1, s1, s2))
     
-    def longest_common_subsequence(self, x, y, s1, s2):
-        return self.lcsUtil(x, y, s1, s2)
+#     def longest_common_subsequence(self, x, y, s1, s2):
+#         return self.lcsUtil(x, y, s1, s2)
 
-# Driver code
-obj = Solution()
-str1 = "ABCDGH"
-str2 = "AEDFHR"
-n = 6
-m = 6
-res = obj.longest_common_subsequence(n, m, str1, str2)
-print(res) 
+# # Driver code
+# obj = Solution()
+# str1 = "ABCDGH"
+# str2 = "AEDFHR"
+# n = 6
+# m = 6
+# res = obj.longest_common_subsequence(n, m, str1, str2)
+# print(res)
 
 
 # here we need to find the longest common subsequence between two string.
@@ -47,10 +47,9 @@ class Solution:
 
         if (s1[x-1] == s2[y-1]):
             dp[x][y] = 1 + self.lcsUtil(x - 1, y - 1, s1, s2, dp)
-            return dp[x][y]
         else:
             dp[x][y] = max(self.lcsUtil(x - 1, y, s1, s2, dp), self.lcsUtil(x, y - 1, s1, s2, dp))
-            return dp[x][y]
+        return dp[x][y]
     
     def longest_common_subsequence(self, x, y, s1, s2):
         dp = [[0 for j in range(y+1)] for i in range(x+1)]
