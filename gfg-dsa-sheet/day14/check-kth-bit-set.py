@@ -1,20 +1,25 @@
 class Solution:
     def check_kth_bit_set(self, n, k):
-        count = 0
-        while count <= k:
-            if count == k:
-                remainder = n % 2
-                if remainder == 1:
-                    return True
-            n = n // 2
-            count += 1
+        # count = 0
+        # while count <= k:
+        #     if count == k:
+        #         remainder = n % 2
+        #         if remainder == 1:
+        #             return True
+        #     n = n // 2
+        #     count += 1
 
+        # return False
+
+        # using bit masking
+        if (n & (1 << k)):
+            return True
         return False
 
 # Driver code
 obj = Solution()
 n = 52
-k = 2
+k = 3
 res = obj.check_kth_bit_set(n, k)
 print(res) 
 
@@ -26,4 +31,4 @@ print(res)
 # as we are starting from 0 and iterating till kth times, the time complexity is - O(k + 1).
 # as we are using variable, which has a constant size, the space complexity will be O(1).
 
-# Video Link - https://www.youtube.com/watch?v=ldhT2uVSdUQ
+# Video Link - https://www.youtube.com/watch?v=ldhT2uVSdUQ / https://www.youtube.com/watch?v=xFWgZ5DTjFo
